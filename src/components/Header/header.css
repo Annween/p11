@@ -1,0 +1,63 @@
+header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+header img {
+    object-fit: contain;
+}
+
+
+
+header nav {
+    display: flex;
+    align-items: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    justify-content: space-between;
+    margin: 10px 4%;
+
+}
+
+header nav ul{
+    display: flex;
+    align-items: center;
+    color: #ff6060;
+    justify-content: space-around;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+ nav ul li  {
+    color: #ff6060;
+    text-decoration: none;
+    margin: 20px;
+}
+
+ header .Header-background
+ {
+     margin: auto;
+     position: relative;
+ }
+
+header .Header-background img
+{
+    border-radius: 10px;
+}
+
+
+header .Header-background h2
+{
+    position: absolute;
+    color: white;
+    top: 38%;
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    font-size: 48px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+}
+
+

@@ -1,0 +1,57 @@
+a {
+    text-decoration: none;
+
+}
+
+.Rental{
+
+    background-color: #FF6060;
+    border-radius: 10px;
+    margin: 10px;
+    width: 400px;
+    height: 500px;
+}
+
+
+.Rental-image{
+width: 400px;
+height: 400px;
+
+}
+
+
+
+.Rental-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.Rental-content {
+
+    padding: 10px;
+
+}
+.Rental-content h4 {
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    color: white;
+
+}
+
+.Rental-slideshow {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+
+}
+
+
+

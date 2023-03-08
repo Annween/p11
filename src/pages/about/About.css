@@ -1,0 +1,60 @@
+.about .background
+{
+    display: flex;
+    justify-content: center;
+}
+
+.about .background img
+{
+    border-radius: 10px;
+    width: 1240px;
+    height: 223px;
+    object-fit: cover;
+}
+
+.about-text
+{
+
+    color: white;
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    font-size: 32px;
+    text-align: center;
+    margin: 10px 4%;
+}
+
+.about-text ul
+{
+    list-style-type: none;
+    text-align: left;
+    margin-bottom: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #ff6060;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.about-text ul  i
+{
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.about-text .list .respect
+{
+    background-color: #F7F7F7;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.about-text .list .respect li
+{
+    color: #ff6060;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    font-family: Montserrat, sans-serif;
+}
