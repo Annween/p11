@@ -24,6 +24,7 @@ function Home() {
 		return () => mounted = false;
 	}, [])
 
+	background();
 	return (
 		<section className="location">
 			{rentals.map(rental => <Rental key={rental.id} data={rental}/>)}
@@ -31,13 +32,13 @@ function Home() {
 	);
 }
 
-//function background() {
-//
-//	return 	<div className="background">
-//		<img src={backgroundImg} alt="home"/>
-//		<h2>Chez vous, partout et ailleurs</h2>
-//	</div>
-//}
+function background() {
+
+	return 	<div className="background">
+		<img src={backgroundImg} alt="home"/>
+		<h2>Chez vous, partout et ailleurs</h2>
+	</div>
+}
 
 
 

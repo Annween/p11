@@ -34,30 +34,13 @@ header nav ul{
     margin: 20px;
 }
 
- header .Header-background
- {
-     margin: auto;
-     position: relative;
- }
-
-header .Header-background img
-{
-    border-radius: 10px;
+@media (max-width: 768px) {
+    header nav {
+        flex-wrap: wrap;
+    }
+    header nav ul {
+        flex-wrap: wrap;
+        font-size: 12px;
+    }
 }
-
-
-header .Header-background h2
-{
-    position: absolute;
-    color: white;
-    top: 38%;
-    font-family: Montserrat, sans-serif;
-    font-weight: 500;
-    font-size: 48px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    width: 100%;
-}
-
 

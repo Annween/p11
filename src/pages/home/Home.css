@@ -4,4 +4,34 @@
     justify-content: space-around;
     align-items: center;
     margin: 10px 4%;
+
+
 }
+
+
+.background
+{
+    margin: auto;
+    position: relative;
+}
+
+.background img
+{
+    border-radius: 10px;
+}
+
+
+.background h2
+{
+    position: absolute;
+    color: white;
+    top: 38%;
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    font-size: 48px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+}
+

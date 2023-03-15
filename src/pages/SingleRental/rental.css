@@ -10,7 +10,7 @@
 .main-infos .title{
     font-size: 36px;
     font-weight: 500;
-    font-family: Montserrat, sans-serif;
+
     color: #ff6060;
 }
 
@@ -18,7 +18,6 @@
 .main-infos .place{
     font-size: 18px;
     font-weight: 500;
-    font-family: Montserrat, sans-serif;
     color: #ff6060;
 }
 .main-infos .tags
@@ -26,7 +25,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 70%;
+    width: 100%;
     text-align: center;
     margin-top: 10px;
 }
@@ -36,28 +35,33 @@
     font-size: 14px;
     font-weight: 500;
     font-style: normal;
-    font-family: Montserrat, sans-serif;
     color: #ffffff;
     background-color: #ff6060;
     border-radius: 10px;
     padding: 5px;
-    width: 45%;
-    margin-left: 10px;
+    width: 100%;
+    margin-right: 10px;
 
+}
 
+.rental-infos
+{
+    text-align: right;
 }
 
 .rental-infos .host{
     display: flex;
     align-items: center;
-    font-size: 18px;
-
+    justify-content: end;
 }
-.rental-infos .host h5 {
+
+
+.rental-infos .host p {
     font-weight: 500;
-    font-family: Montserrat, sans-serif;
+    font-size: 18px;
     color: #ff6060;
     margin-right: 10px;
+    width: min-content;
 }
 .rental-infos .host img{
     width: 64px;
@@ -66,11 +70,24 @@
     margin-right: 10px;
 }
 
+.rental-infos .rating{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.rental-infos .rating img{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
 .details-container
 {
     display: flex;
     width: 100%;
-    justify-content: center;
+
 }
 
 .details-container .btn
@@ -78,7 +95,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     margin-top: 20px;
     border: none;
     background-color: #ff6060;
@@ -88,18 +104,78 @@
     font-size: 18px;
 }
 
+.container-flex
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 4%;
 
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active {
-    background-color: #ccc;
 }
 
-/* Style the collapsible content. Note: hidden by default */
-.collaspe {
-    padding: 0 18px;
-    display: none;
-    overflow: hidden;
-    background-color: #f1f1f1;
+.container-flex .collapsible
+{
+    width: 100%;
+    margin-right: 10px;
 }
 
+
+@media (max-width: 768px) {
+
+    .container
+    {
+        flex-wrap: wrap;
+    }
+
+    .container .main-infos .title
+    {
+        font-size: 18px;
+    }
+
+    .container .main-infos .place
+    {
+        font-size: 14px;
+    }
+
+    .container .main-infos .tags span
+    {
+        font-size: 10px;
+        padding: 3px;
+    }
+
+    .container .rental-infos .host p
+    {
+       font-size: 12px;
+    }
+
+
+    .container .rental-infos .host img
+    {
+        width: 32px;
+        height: 32px;
+    }
+
+    .container .rental-infos .rating img
+    {
+        width: 15px;
+        height: 15px;
+    }
+
+    .container-flex
+    {
+        flex-wrap: wrap;
+    }
+    .container-flex .collapsible
+    {
+        width: 100%;
+        margin-right: 0;
+        flex-wrap: wrap;
+        font-size: 14px;
+    }
+    .container-flex .btn
+    {
+        width: 100%;
+    }
+
+}
 

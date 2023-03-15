@@ -5,11 +5,11 @@ a {
 
 .Rental{
 
-    background-color: #FF6060;
     border-radius: 10px;
     margin: 10px;
     width: 400px;
     height: 500px;
+    background: #FF6060 linear-gradient(180deg, #FF6060 0%, #FF6060 100%);
 }
 
 
@@ -35,8 +35,6 @@ height: 400px;
 
 }
 .Rental-content h4 {
-
-    font-family: 'Montserrat', sans-serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 500;

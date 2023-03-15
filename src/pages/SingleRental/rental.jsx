@@ -31,7 +31,6 @@ function Rental() {
 		<section>
 			<Gallery pictures={rental.pictures}/>
 			<div className="container">
-		
 				<div className="main-infos">
 					<h1 className="title">{rental.title}</h1>
 					<span className="place">{rental.location}</span>
@@ -41,23 +40,12 @@ function Rental() {
 				</div>
 				<div className="rental-infos">
 					{getHosts(rental.host)}
-					<Rating rating={rental.rating} />
+					<Rating rating={rental.rating}  />
 				</div>
 			</div>
-
-			<Collapse title={"test"} content={"ploppooodshfhdsfnsduj"} />
-				<div className="details-container">
-					<div className="description">
-					<button type="button" className="btn">Description<i className="fas fa-chevron-down"></i></button>
-			
-					</div>
-			
-					<div className="equipement">
-						<button type="button" className="btn">Equipement<i className="fas fa-chevron-down"></i></button>
-					<div className="collaspe">
-						{getEquipments(rental.equipments)}
-					</div>
-				</div>
+			<div className="container-flex">
+			<Collapse title="Description" content={rental.description}/>
+			<Collapse title="Equipements" content={getEquipments(rental.equipments)}/>
 			</div>
 		</section>
 	)
@@ -69,7 +57,7 @@ function Rental() {
 
 function getHosts(host) {
 	return <div className="host">
-		<h5>{host && host.name}</h5>
+		<p>{host && host.name}</p>
 		<img src={host && host.picture} alt="host"/>
 	</div>
 }

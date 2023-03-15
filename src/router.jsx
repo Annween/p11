@@ -6,6 +6,7 @@ import About from "./pages/about/About";
 import Error from "./pages/error/error";
 import React from "react";
 import SingleRental from "./pages/SingleRental/rental";
+import Footer from "./components/Footer";
 //const id = useParams();
 
 
@@ -18,6 +19,7 @@ function Router() {
 			<Route path="/about" element={<About/>}/>
 			<Route path="*" element={<Error />}/>
 		</Routes>
+		<Footer/>
 	</BrowserRouter>
 }
 

@@ -1,36 +1,35 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import backgroundImg from "../../images/about.png";
 import "./About.css";
+import Collapse from "../../components/Collapse";
 
 
 function About() {
+	//get about data from api
+	const [about, setAbout] = useState([])
+
+	async function getCollapsibleFromAbout() {
+		const response = await fetch('/api/rentals.json')
+		return await response.json();
+	}
+
+	useEffect(() => {
+		let mounted = true;
+		getCollapsibleFromAbout()
+			.then(items => {
+				if (mounted) {
+					setAbout(items.about)
+				}
+			})
+		return () => mounted = false;
+	}, [])
 	return (
 		<section className="about">
 			<div className="background">
 				<img src={backgroundImg} alt="about"/>
 			</div>
-			<div className="about-text">
-				<ul className="list">
-					<li>Fiabilité</li>
-					<i className="fas fa-chevron-down"></i>
-				</ul>
-				<ul className="list">
-					<li>Respect</li>
-					<i className="fas fa-chevron-down"></i>
-					<div className="respect">
-					<ul>
-						<li>La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.</li>
-					</ul>
-					</div>
-				</ul>
-				<ul className="list">
-					<li>Service</li>
-					<i className="fas fa-chevron-down"></i>
-				</ul>
-				<ul className="list">
-					<li>Responsabilité</li>
-					<i className="fas fa-chevron-down"></i>
-				</ul>
+			<div className="about-container">
+			{about.map(about => <Collapse key={about.id} title={about.title} content={about.content}/>)}
 			</div>
 		</section>
 	);
