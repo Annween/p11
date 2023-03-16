@@ -40,20 +40,20 @@ function Rental() {
 				</div>
 				<div className="rental-infos">
 					{getHosts(rental.host)}
-					<Rating rating={rental.rating}  />
+					<Rating rating={rental.rating}/>
 				</div>
 			</div>
 			<div className="container-flex">
-			<Collapse title="Description" content={rental.description}/>
-			<Collapse title="Equipements" content={getEquipments(rental.equipments)}/>
+				<Collapse title="Description" content={getDescription(rental.description)}/>
+				<Collapse title="Equipements" content={getEquipments(rental.equipments)}/>
 			</div>
 		</section>
 	)
 }
 
-
-
-
+function getDescription(description) {
+	return <p>{description}</p>
+}
 
 function getHosts(host) {
 	return <div className="host">
@@ -63,17 +63,16 @@ function getHosts(host) {
 }
 
 function getEquipments(equipments) {
-	//build list
-	return equipments && equipments.map(equipment =>
-		<ul>
+	return <ul>
+		{equipments && equipments.map(equipment =>
 			<li key={equipment}>{equipment}</li>
-		</ul>
-	)
+		)}</ul>
 }
 
 function getTags(tags) {
 	return tags && tags.map(tag =>
-		<span>{tag}</span>
+		<span key={tag}>{tag}</span>
 	)
 }
+
 export default Rental;

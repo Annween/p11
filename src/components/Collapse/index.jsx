@@ -9,7 +9,7 @@ const Collapse = (props) => {
 				<i className={isCollapsed ? "fas fa-chevron-up" : "fas fa-chevron-down"}></i>
 			</div>
 			<div className={isCollapsed ? "content show" : "content"}>
-			<p>{props.content}</p>
+			{props.content}
 			</div>
 		</div>
 

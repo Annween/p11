@@ -3,8 +3,7 @@ import './Rental.css';
 import {Link} from "react-router-dom";
 
 
-function Rental(props)
-{
+function Rental(props) {
 	return <Link key={`rental-${props.data.id}`} to={`/rental/${props.data.id}`}>
 		<div className="Rental">
 			<div className="Rental-image">

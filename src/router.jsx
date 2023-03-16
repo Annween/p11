@@ -1,7 +1,6 @@
 import Header from "./components/Header";
 import {BrowserRouter, Route, Routes, useParams} from "react-router-dom";
 import Home from "./pages/home/Home";
-import Rental from "./components/Rental";
 import About from "./pages/about/About";
 import Error from "./pages/error/error";
 import React from "react";
