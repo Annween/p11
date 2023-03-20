@@ -4,6 +4,13 @@ import Rental  from '../../components/Rental';
 import backgroundImg from "../../images/background.png";
 
 
+const Background = () => {
+
+	return 	<div className="background">
+		<img src={backgroundImg} alt="home"/>
+		<h2>Chez vous, partout et ailleurs</h2>
+	</div>
+}
 
 function Home() {
 	const [rentals, setRentals] = useState([])
@@ -24,21 +31,17 @@ function Home() {
 		return () => mounted = false;
 	}, [])
 
-	background();
 	return (
-		<section className="location">
+
+		<div className="main">
+			<Background />
+			<section className="location">
 			{rentals.map(rental => <Rental key={rental.id} data={rental}/>)}
-		</section>
+			</section>
+		</div>
 	);
 }
 
-function background() {
-
-	return 	<div className="background">
-		<img src={backgroundImg} alt="home"/>
-		<h2>Chez vous, partout et ailleurs</h2>
-	</div>
-}
 
 
 

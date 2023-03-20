@@ -26,6 +26,7 @@ header nav ul{
     justify-content: space-around;
     text-decoration: none;
     list-style-type: none;
+    padding-inline-start: 0px;
 }
 
  nav ul li  {
@@ -35,12 +36,18 @@ header nav ul{
 }
 
 @media (max-width: 768px) {
+
+    header img {
+        width: 145px;
+        height: 47px;
+    }
     header nav {
         flex-wrap: wrap;
     }
     header nav ul {
         flex-wrap: wrap;
         font-size: 12px;
+        padding-inline-start: 0px;
     }
 }
 

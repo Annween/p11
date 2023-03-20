@@ -4,7 +4,7 @@ import './rental.css';
 import Rating from "../../components/Rating";
 import Gallery from "../../components/Gallery";
 import Collapse from "../../components/Collapse";
-
+import Error from "../error/error";
 function Rental() {
 	let {id} = useParams();
 	const [rental, setRental] = useState([])
@@ -27,6 +27,10 @@ function Rental() {
 			})
 		return () => mounted = false;
 	}, [id])
+
+	if (!rental.id || rental.id !== id) {
+		return <Error/>
+	}
 	return (
 		<section>
 			<Gallery pictures={rental.pictures}/>

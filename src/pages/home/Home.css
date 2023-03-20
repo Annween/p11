@@ -1,23 +1,26 @@
 .location {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
     align-items: center;
-    margin: 10px 4%;
-
-
+    margin: 40px 4%;
+    background-color: #F6F6F6;
+    border-radius: 25px;
+    padding: 15px;
 }
 
 
 .background
 {
-    margin: auto;
+    margin: 40px 4%;
     position: relative;
 }
 
 .background img
 {
     border-radius: 10px;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
 }
 
 
@@ -34,4 +37,36 @@
     text-align: center;
     width: 100%;
 }
+
+@media (max-width: 768px) {
+    .location {
+        background-color: white;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+    .background {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+    }
+
+    .background h2 {
+        position: absolute;
+        text-align: left;
+        font-size: 24px;
+        width: 50%;
+        padding: 0;
+    }
+
+    .background img {
+        height: 100px;
+        width: 330px;
+    }
+
+}
+
 

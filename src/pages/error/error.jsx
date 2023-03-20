@@ -6,7 +6,7 @@ function error() {
 	<div className="error">
 	  <h1>404</h1>
 		<h4>Oups ! La page que vous demandez n'existe pas</h4>
-		<Link to="/">Retour sur la page d'accueil</Link>
+		<Link to="/"><u>Retour sur la page d'accueil</u></Link>
 	</div>
   );
 }

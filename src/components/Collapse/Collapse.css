@@ -1,8 +1,7 @@
 .collapsible {
-    background-color: #ff6060;
+
     color: white;
     cursor: pointer;
-    padding: 18px;
     border: none;
     text-align: left;
     outline: none;
@@ -17,6 +16,9 @@
     justify-content: space-between;
     color: white;
     font-size: 24px;
+    background-color: #ff6060;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .collapsible i {
@@ -33,8 +35,6 @@
     color: #FF6060;
     font-size: 24px;
     border-radius: 5px;
-    margin-top: 20px;
-
 }
 
 .content ul {
@@ -44,6 +44,15 @@
 
 .show {
     display: block;
+}
+
+@media (max-width: 768px) {
+    .collapsible .title {
+        font-size: 13px;
+    }
+    .content {
+        font-size: 12px;
+    }
 }
 
 

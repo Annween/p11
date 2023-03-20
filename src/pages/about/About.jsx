@@ -25,7 +25,7 @@ function About() {
 	}, [])
 	return (
 		<section className="about">
-			<div className="background">
+			<div className="about-background">
 				<img src={backgroundImg} alt="about"/>
 			</div>
 			<div className="about-container">
