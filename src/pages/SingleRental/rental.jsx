@@ -28,6 +28,7 @@ function Rental() {
 		return () => mounted = false;
 	}, [id])
 
+
 	if (!rental.id || rental.id !== id) {
 		return <Error/>
 	}
